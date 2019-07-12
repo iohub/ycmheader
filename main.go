@@ -172,7 +172,9 @@ func main() {
 		}
 		includeOf(fpath, hmap)
 	}
-	found := make(map[string]int)
+	found := map[string]int{
+		".": 1,
+	}
 	count := 0
 	for header, _ := range hmap {
 		// fmt.Printf("[%s]\n", header)
